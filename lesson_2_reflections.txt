@@ -1,7 +1,16 @@
 git init //initializes a git repository but does not create a commit
 ls -a //lists all the files in the selected directory, including hidden folders like .git
-git status //checks the status of the files in the repository
+git status //checks the status of the files in the working directory
+git add [file name] //adds file to the staging area to be tracked by git
+git reset [file name] //undoes the action of the git add command
 
 Q: What happens when you initialize a repository? Why do you need to do it?
 A: A .git folder is created which stores all the metadata of said repository. This has to be done
 so that the user is able to take advantage of the features of version control.
+
+Q: How is the staging area different from the working directory and the repository? What value do
+you think it offers?
+A: The staging area serves as a buffer for the user to select which files he or she would like to
+add from the working directory to the repository using the command git add. During this stage,
+the addition can be reversed with the command git reset. Once the user is firm on the files he or
+she would like to add to the repository, he or she can create a commit of those files.
