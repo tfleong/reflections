@@ -1,0 +1,7 @@
+git init //initializes a git repository but does not create a commit
+ls -a //lists all the files in the selected directory, including hidden folders like .git
+git status //checks the status of the files in the repository
+
+Q: What happens when you initialize a repository? Why do you need to do it?
+A: A .git folder is created which stores all the metadata of said repository. This has to be done
+so that the user is able to take advantage of the features of version control.

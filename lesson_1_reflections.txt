@@ -1,0 +1,46 @@
+diff -u [old commit ID] [new commit ID] //when there is no repository (history)
+git diff [old commit ID] [new commit ID]
+git log --stat //gives statistics
+git config --global color.ui auto //adds colors to differentiate between additions and deletions
+'q' key //quits git log
+git checkout [commit ID] //revert the HEAD to the commit of choice
+
+Q: How did viewing a diff between two versions of a file help you see the bug that was introduced?
+A: The function diff hightlights the differences between two files by marking a line that is no
+longer available in a newer version with a minus sign while assigning a plus sign to a completely
+new line that was previously not present in the older version.
+
+Q: How could having access to the entire history of a file make you a more efficient programmer
+in the long term?
+A: I would say having such access would remind myself to not repeat the same mistakes or attempts
+I have made to solve a particular problem before that did not exactly work out the way it was
+supposed to.
+
+Q: What do you think are the pros and cons of manually choosing when to create a commit, like you
+do in Git, vs having versions automatically saved, like Google Docs does?
+A: One of the pros would be it allows a clear and easy way to identify the changes you have made
+between versions such as the type of changes or the scale. However, the cons of manually choosing
+when to create a commit is most apparent when hardware failure or power outage occurs in the
+middle of your editing, especially when big changes are being made, which causes you to lose all
+of your changes since your last save. In light of such events, having versions automatically
+saved likes Google Docs does is a welcome feature.
+
+Q: Why do you think some version control systems, like Git, allow saving multiple files in one
+commit, while others, like Google Docs, treat each file separately?
+A: A program can be made up of multiple interdependent files, such as the asteroid game example
+used in the course so being able to save multiple files in one commit is essential whereas files
+created using Google Docs may not necessarily be related to each other and therefore is more
+likely to be treated separately.
+
+Q: How can you use the commands git log and git diff to view the history of files?
+A: The command git log allows me to view the objective of each commits that are made to the files
+but in order to delve deeper into the changes I would have to use the command git diff to compare
+the differences between two commits.
+
+Q: How might using version control make you more confident to make changes that could break
+something?
+A: Assuming you have followed proper version control practice, you know that you could always
+revert back to a previous commit that is without errors using the command git checkout.
+
+Q: Now that you have your workspace set up, what do you want to try using Git for?
+A: The answer to that question shall be left for another time.
