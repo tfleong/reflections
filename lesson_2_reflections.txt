@@ -3,6 +3,9 @@ ls -a //lists all the files in the selected directory, including hidden folders 
 git status //checks the status of the files in the working directory
 git add [file name] //adds file to the staging area to be tracked by git
 git reset [file name] //undoes the action of the git add command
+git commit -m '[commit message]' //creates a commit with an associated message to the change
+git diff //compares the difference between the files that are common in the working directory and the staging area
+git diff --staged //compares the difference between the files that are common in the staging area and the repository
 
 Q: What happens when you initialize a repository? Why do you need to do it?
 A: A .git folder is created which stores all the metadata of said repository. This has to be done
