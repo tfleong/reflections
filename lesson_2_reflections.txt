@@ -6,6 +6,16 @@ git reset [file name] //undoes the action of the git add command
 git commit -m '[commit message]' //creates a commit with an associated message to the change
 git diff //compares the difference between the files that are common in the working directory and the staging area
 git diff --staged //compares the difference between the files that are common in the staging area and the repository
+git checkout head //in the currently active branch, you are pointed back to the latest commit
+git branch //checks the status of branches; the branch that is highlighted with an asterisk is the current branch
+git branch [branch name] //creates a new branch using the given branch name
+git checkout [branch name] //sets the branch of choice as the active branch
+git checkout -b [branch name] //performs the actions of the previous 2 commands in one sitting
+git diff [branch 1] [branch 2]
+git log --graph --oneline [branch 1] [branch 2] //displays the history of the branches
+git merge [branch 1] [branch 2] //merges the branches together
+git branch -d [branch name] //deletes the label of the branch; the commits remain
+git show [commit ID] //performs a git diff command on a given commit without having to know who its parent is
 
 Q: What happens when you initialize a repository? Why do you need to do it?
 A: A .git folder is created which stores all the metadata of said repository. This has to be done
@@ -17,3 +27,30 @@ A: The staging area serves as a buffer for the user to select which files he or 
 add from the working directory to the repository using the command git add. During this stage,
 the addition can be reversed with the command git reset. Once the user is firm on the files he or
 she would like to add to the repository, he or she can create a commit of those files.
+
+Q: How can you use the staging area to make sure you have one commit per logical change?
+A: I believe this can be done by adding the files of interest to the staging area and making
+comparisons between the files on the staging area and those in the repository using the command
+git diff --staged.
+
+Q: What are some situations when branches would be helpful in keeping your history organized?
+How would branches help?
+A: Branches are helpful when an author would like to make drastic changes (e.g. experimental etc)
+to a project but would also like to keep the working version in tact while working on those
+changes on a new branch.
+
+Q: How do the diagrams help you visualize the branch structure?
+A: Not only do they provide an easy and concise visualization of the branch history, it also gives
+the user an idea of the reachability of the commits involved.
+
+Q: What is the result of merging two branches together? Why do we represent it in the diagram the
+way we do?
+A: The result is a combination of all the features from each of the branches. By representing it
+in the diagram the way we do, we are able to keep track of the history of changes.
+
+Q: What are the pros and cons of Git's automatic merging vs. always doing merges manually?
+A: An advantage of Git's automatic merging would be automatic identification of conflicts that
+are present in the files. It identifies these conflicts by encapsulating them in lines of special
+symbols which makes it easy for the author to locate and understand the problem. The disadvantage
+of such feature is that Git is unable to determine how to proceed with the conflicts and will have
+to rely on user input in order to resolve the issues.
