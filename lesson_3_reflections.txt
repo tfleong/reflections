@@ -1,10 +1,14 @@
 git remote //lists out the remotes one has, if any
 git remote -v //lists out the remotes one has in greater detail (verbose), if any
 git remote add [remote name] [GitHub server URL] //creates a new remote (usually master branch) at the given repository on GitHub
+e.g. git remote add origin http://github.com/.../...
+e.g. git remote add upstream http://github.com/.../...
 git push [remote name] [branch name] //pushes the local branch onto the remote branch on GitHub
+e.g. git push origin different-oil
 git pull [remote name] [branch name] //pulls the branch from the remote
+e.g. git pull origin master
 git branch -a //shows also the local copy of the remote branch
-git fetch [remote name] //fetches the remote branch and stores it locally
+git fetch [remote name] //fetches the remote branch and stores it locally; does not merge
 git pull = git fetch + git merge
 
 Q: When would you want to use a remote repository rather than keeping all your work local?
@@ -12,7 +16,8 @@ A: When I intend to share my work with other people.
 
 Q: Why might you want to always pull changes manually rather than having Git automatically stay
 up-to-date with your remote repository?
-A: I am afraid I do not know why I might want to do that for the time being.
+A: The command git pull performs automatic merging which is not necessarily always a desired
+behaviour so one might only want to do so manually when the time is right.
 
 Q: Describe the differences between forks, clones, and branches. When would you use one instead
 of another?
@@ -27,3 +32,16 @@ Q: What is the benefit of having a copy of the last known state of the remote st
 A: In a collaborative effort, this allows one to know when and what kind of commits are made by
 the respective collaborators starting from that point on so it makes tracking simpler and the
 decision-making process easier.
+
+Q: How would you collaborate without using Git or GitHub? What would be easier, and what would be
+harder?
+A: 
+
+Q: When would you want to make changes in a separate branch rather than directly in master? What
+benefits does each approach have?
+A: I would want to make changes in a separate branch rather than directly in master when I am
+aware that what I am about to do has a high probability of breaking whatever that is being worked
+on so I will always have the working master branch to fall back on if something goes awry.
+However, there are benefits to modifying the master directly because you would not have to go
+through all the trouble of merging and pushing which are things you will come across when working
+on branches.

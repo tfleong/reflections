@@ -13,6 +13,7 @@ git checkout [branch name] //sets the branch of choice as the active branch
 git checkout -b [branch name] //performs the actions of the previous 2 commands in one sitting
 git diff [branch 1] [branch 2]
 git log --graph --oneline [branch 1] [branch 2] //displays the history of the branches
+git log -n 1 //displays only the details of the latest commit
 git merge [branch 1] [branch 2] //merges the branches together
 git merge --abort //aborts the merging process
 git branch -d [branch name] //deletes the label of the branch; the commits remain
