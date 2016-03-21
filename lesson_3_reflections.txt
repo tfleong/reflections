@@ -1,1 +1,7 @@
+git remote //lists out the remotes one has, if any
+git remote -v //lists out the remotes one has in greater detail (verbose), if any
+git remote add [remote name] [GitHub server URL] //creates a new remote branch at the given repository on GitHub
+git push [remote name] [branch name] //pushes the local branch onto the remote branch on GitHub
 
+Q: When would you want to use a remote repository rather than keeping all your work local?
+A: When I intend to share my work with other people.
