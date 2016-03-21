@@ -14,6 +14,7 @@ git checkout -b [branch name] //performs the actions of the previous 2 commands 
 git diff [branch 1] [branch 2]
 git log --graph --oneline [branch 1] [branch 2] //displays the history of the branches
 git merge [branch 1] [branch 2] //merges the branches together
+git merge --abort //aborts the merging process
 git branch -d [branch name] //deletes the label of the branch; the commits remain
 git show [commit ID] //performs a git diff command on a given commit without having to know who its parent is
 

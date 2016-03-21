@@ -1,7 +1,29 @@
 git remote //lists out the remotes one has, if any
 git remote -v //lists out the remotes one has in greater detail (verbose), if any
-git remote add [remote name] [GitHub server URL] //creates a new remote branch at the given repository on GitHub
+git remote add [remote name] [GitHub server URL] //creates a new remote (usually master branch) at the given repository on GitHub
 git push [remote name] [branch name] //pushes the local branch onto the remote branch on GitHub
+git pull [remote name] [branch name] //pulls the branch from the remote
+git branch -a //shows also the local copy of the remote branch
+git fetch [remote name] //fetches the remote branch and stores it locally
+git pull = git fetch + git merge
 
 Q: When would you want to use a remote repository rather than keeping all your work local?
 A: When I intend to share my work with other people.
+
+Q: Why might you want to always pull changes manually rather than having Git automatically stay
+up-to-date with your remote repository?
+A: I am afraid I do not know why I might want to do that for the time being.
+
+Q: Describe the differences between forks, clones, and branches. When would you use one instead
+of another?
+A: Forks are the equivalent of clones but are only applicable on GitHub, that is to say only on
+remote repositories. One forks when he or she does not have the permision to make changes to the
+original author's work directly. Clones are essentially copies of any given repository and is the
+term used for a repository which is copied from a remote host to a local one or from a local host
+to another local one. Branches are deviations which originate from a common ancestry and are used
+when the author wants to introduce significant changes or to experiment with something new.
+
+Q: What is the benefit of having a copy of the last known state of the remote stored locally?
+A: In a collaborative effort, this allows one to know when and what kind of commits are made by
+the respective collaborators starting from that point on so it makes tracking simpler and the
+decision-making process easier.
